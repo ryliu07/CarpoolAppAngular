@@ -12,10 +12,13 @@ var core_1 = require("@angular/core");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var header_component_1 = require("./header/header.component");
-var find_car_component_1 = require("./find-car/find-car.component");
-var find_passenger_component_1 = require("./find-passenger/find-passenger.component");
-var login_component_1 = require("./login/login.component");
-var welcome_page_component_1 = require("./welcome-page/welcome-page.component");
+var find_car_component_1 = require("./pages/find-car/find-car.component");
+var find_passenger_component_1 = require("./pages/find-passenger/find-passenger.component");
+var login_component_1 = require("./pages/login/login.component");
+var welcome_page_component_1 = require("./pages/welcome-page/welcome-page.component");
+var page_not_found_component_1 = require("./pages/page-not-found/page-not-found.component");
+var car_posting_card_component_1 = require("./pages/find-car/car-posting-card/car-posting-card.component");
+var passenger_posting_card_component_1 = require("./pages/find-passenger/passenger-posting-card/passenger-posting-card.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,7 +30,10 @@ var AppModule = /** @class */ (function () {
                 find_car_component_1.FindCarComponent,
                 find_passenger_component_1.FindPassengerComponent,
                 login_component_1.LoginComponent,
-                welcome_page_component_1.WelcomePageComponent
+                welcome_page_component_1.WelcomePageComponent,
+                page_not_found_component_1.PageNotFoundComponent,
+                car_posting_card_component_1.CarPostingCardComponent,
+                passenger_posting_card_component_1.PassengerPostingCardComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,

@@ -10,8 +10,31 @@ exports.FindCarComponent = void 0;
 var core_1 = require("@angular/core");
 var FindCarComponent = /** @class */ (function () {
     function FindCarComponent() {
+        this.car1 = {
+            departure: "Toronto",
+            destination: "Markham",
+            dropoff: ["North York"],
+            plate: "CHAZ235",
+            phoneNum: "42695291",
+            occupancy: 2,
+            luggage: 0,
+            departureTimeRange: [new Date('2019-12-17T03:24:00'), new Date('2019-12-17T10:24:00')],
+            note: "test123"
+        };
+        this.car2 = {
+            departure: "Toronto",
+            destination: "Winnipeg",
+            dropoff: ["Thunder Bay"],
+            plate: "FWNPG",
+            phoneNum: "08508112",
+            occupancy: 2,
+            luggage: 2,
+            departureTimeRange: [new Date('2019-12-17T03:24:00'), new Date('2019-12-17T10:24:00')],
+            note: "test 190tjgnva fff"
+        };
     }
     FindCarComponent.prototype.ngOnInit = function () {
+        //request to Toronto carpool list on init
     };
     FindCarComponent = __decorate([
         core_1.Component({
