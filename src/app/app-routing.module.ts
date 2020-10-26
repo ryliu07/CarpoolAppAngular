@@ -8,10 +8,11 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 
 const mainAppRoutes: Routes = [
-  {path: '**', component: PageNotFoundComponent},
+  {path: '', component: WelcomePageComponent},
   {path: 'find-car', component: FindCarComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'find-passenger', component: FindPassengerComponent}
+  {path: 'find-passenger', component: FindPassengerComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
