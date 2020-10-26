@@ -8,6 +8,7 @@ import { FindCarComponent } from './find-car/find-car.component';
 import { FindPassengerComponent } from './find-passenger/find-passenger.component';
 import { LoginComponent } from './login/login.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     FindCarComponent,
     FindPassengerComponent,
     LoginComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
