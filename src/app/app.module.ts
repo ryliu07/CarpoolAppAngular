@@ -9,6 +9,8 @@ import { FindPassengerComponent } from './find-passenger/find-passenger.componen
 import { LoginComponent } from './login/login.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CarPostingCardComponent } from './find-car/car-posting-card/car-posting-card.component';
+import { PassengerPostingCardComponent } from './find-passenger/passenger-posting-card/passenger-posting-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FindPassengerComponent,
     LoginComponent,
     WelcomePageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CarPostingCardComponent,
+    PassengerPostingCardComponent
   ],
   imports: [
     BrowserModule,
