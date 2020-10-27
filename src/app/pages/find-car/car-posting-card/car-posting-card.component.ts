@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CarPost } from 'src/app/model/car-post.model';
 
 @Component({
   selector: 'car-posting-card',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarPostingCardComponent implements OnInit {
 
+  @Input() post: CarPost;
   constructor() { }
 
   ngOnInit(): void {

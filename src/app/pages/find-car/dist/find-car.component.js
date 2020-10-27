@@ -8,39 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.FindCarComponent = void 0;
 var core_1 = require("@angular/core");
+var car_post_service_1 = require("src/app/services/car-post.service");
 var FindCarComponent = /** @class */ (function () {
-    function FindCarComponent() {
-        this.car1 = {
-            departure: "Toronto",
-            destination: "Markham",
-            dropoff: ["North York"],
-            plate: "CHAZ235",
-            phoneNum: "42695291",
-            occupancy: 2,
-            luggage: 0,
-            departureTimeRange: [new Date('2019-12-17T03:24:00'), new Date('2019-12-17T10:24:00')],
-            note: "test123"
-        };
-        this.car2 = {
-            departure: "Toronto",
-            destination: "Winnipeg",
-            dropoff: ["Thunder Bay"],
-            plate: "FWNPG",
-            phoneNum: "08508112",
-            occupancy: 2,
-            luggage: 2,
-            departureTimeRange: [new Date('2019-12-17T03:24:00'), new Date('2019-12-17T10:24:00')],
-            note: "test 190tjgnva fff"
-        };
+    function FindCarComponent(carPostService) {
+        this.carPostService = carPostService;
     }
     FindCarComponent.prototype.ngOnInit = function () {
         //request to Toronto carpool list on init
+        this.carPostList = this.carPostService.carPostList;
     };
     FindCarComponent = __decorate([
         core_1.Component({
             selector: 'app-find-car',
             templateUrl: './find-car.component.html',
-            styleUrls: ['./find-car.component.css']
+            styleUrls: ['./find-car.component.css'],
+            providers: [car_post_service_1.CarPostService]
         })
     ], FindCarComponent);
     return FindCarComponent;

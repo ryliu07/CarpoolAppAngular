@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FindCarComponent } from './pages/find-car/find-car.component';
 import { FindPassengerComponent } from './pages/find-passenger/find-passenger.component';
 import { LoginComponent } from './pages/login/login.component';

@@ -13,6 +13,9 @@ var CarPostingCardComponent = /** @class */ (function () {
     }
     CarPostingCardComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        core_1.Input()
+    ], CarPostingCardComponent.prototype, "post");
     CarPostingCardComponent = __decorate([
         core_1.Component({
             selector: 'car-posting-card',

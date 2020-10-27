@@ -1,11 +1,33 @@
-<div class="card">
+
+<div class="card" data-toggle="collapse">
   <div class="row no-gutters">
-    <div class = col-md-4>
+    <div class = col-md-1>
       <img src="../assets/car.svg" class="card-img" width="30" height="30">
     </div>
-    <div class = col-md-8>
+    <div class = col-md-10>
       <div class="card-body">
-        car posting placeholder
+        <div class="container-fluid">
+          <div class="row no-gutters">
+            <div class="col">Departure: {{ post.departure }}</div>
+            <div class="col">Departure: {{ post.destination }}</div>
+            <div class="col-0.7">
+              <div type="button" class="btn-secondary">Book</div>
+            </div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col">Available DropOff: {{ post.dropoff }}</div>
+          </div>
+          <div class="row no-gutters">
+            <div class="">Pickup Time: {{ post.departureTimeRange[0] }} - {{ post.departureTimeRange[1] }}</div>
+          </div>
+          <div class="row no-gutters">
+            <div class="col">Occupancy: {{ post.occupancy }}</div>
+            <div class="col">Luggage: {{ post.occupancy }}</div>
+          </div>
+          <div class="row no-gutters">
+            <div class ="col">Note: {{ post.note }}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

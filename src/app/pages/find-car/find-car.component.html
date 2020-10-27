@@ -7,10 +7,10 @@
           <input class="form-control"  placeholder="Form place holder">
         </div>
       </form>
-      <car-posting-card></car-posting-card>
-      <car-posting-card></car-posting-card>
-      <car-posting-card></car-posting-card>
-      <car-posting-card></car-posting-card>
+      <li *ngFor="let post of carPostList">
+        <car-posting-card [post]="post"></car-posting-card>
+      </li>
+      
     </div>
     <div class="col-2">
       placeholder for some feature

@@ -9,11 +9,11 @@ exports.__esModule = true;
 exports.AppRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var find_car_component_1 = require("./find-car/find-car.component");
-var find_passenger_component_1 = require("./find-passenger/find-passenger.component");
-var login_component_1 = require("./login/login.component");
-var page_not_found_component_1 = require("./page-not-found/page-not-found.component");
-var welcome_page_component_1 = require("./welcome-page/welcome-page.component");
+var find_car_component_1 = require("./pages/find-car/find-car.component");
+var find_passenger_component_1 = require("./pages/find-passenger/find-passenger.component");
+var login_component_1 = require("./pages/login/login.component");
+var page_not_found_component_1 = require("./pages/page-not-found/page-not-found.component");
+var welcome_page_component_1 = require("./pages/welcome-page/welcome-page.component");
 var mainAppRoutes = [
     { path: '', component: welcome_page_component_1.WelcomePageComponent },
     { path: 'find-car', component: find_car_component_1.FindCarComponent },
