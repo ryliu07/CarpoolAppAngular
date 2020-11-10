@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { CarPostingCardComponent } from './pages/find-car/car-posting-card/car-posting-card.component';
 import { PassengerPostingCardComponent } from './pages/find-passenger/passenger-posting-card/passenger-posting-card.component';
+import { SearchFormWelcomepageComponent } from './components/search-form-welcomepage/search-form-welcomepage.component';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +25,13 @@ import { PassengerPostingCardComponent } from './pages/find-passenger/passenger-
     WelcomePageComponent,
     PageNotFoundComponent,
     CarPostingCardComponent,
-    PassengerPostingCardComponent
+    PassengerPostingCardComponent,
+    SearchFormWelcomepageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

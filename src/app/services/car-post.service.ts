@@ -1,38 +1,16 @@
 import { CarPost } from '../model/car-post.model';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
+@Injectable()
 export class CarPostService{
 
-    carPostList : CarPost[] = [
-        {
-            departure: "Toronto",
-            destination: "Markham",
-            dropoff: ["North York"],
-        
-            plate: "CHAZ235",
-            phoneNum: "42695291",
-        
-            occupancy: 2,
-            luggage: 0,
-        
-            departureTimeRange: [new Date('2019-12-17T03:24:00'), new Date('2019-12-17T10:24:00')],
-            note:  "test123"
-        },
-        
-        {
-        departure: "Toronto",
-        destination: "Winnipeg",
-        dropoff: ["Thunder Bay"],
-    
-        plate: "FWNPG",
-        phoneNum: "08508112",
-    
-        occupancy: 2,
-        luggage: 2,
-    
-        departureTimeRange: [new Date('2019-12-17T03:24:00'), new Date('2019-12-17T10:24:00')],
-        note:  "test 190tjgnva fff"
-        }
-    ]
+    carPostListUrl = 'http://3.136.15.175/api/carpost';
+    constructor(private http: HttpClient){}
+
+    getCarPostList(){
+        return this.http.get<CarPost[]>(this.carPostListUrl)
+    }
     
     
 }

@@ -18,11 +18,11 @@
             <div class="col">Available DropOff: {{ post.dropoff }}</div>
           </div>
           <div class="row no-gutters">
-            <div class="">Pickup Time: {{ post.departureTimeRange[0] }} - {{ post.departureTimeRange[1] }}</div>
+            <div class="">Pickup Time: {{ post.timeBegin }} - {{ post.timeEnd }}</div>
           </div>
           <div class="row no-gutters">
             <div class="col">Occupancy: {{ post.occupancy }}</div>
-            <div class="col">Luggage: {{ post.occupancy }}</div>
+            <div class="col">Luggage: {{ post.luggage }}</div>
           </div>
           <div class="row no-gutters">
             <div class ="col">Note: {{ post.note }}</div>

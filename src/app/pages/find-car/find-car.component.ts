@@ -16,7 +16,9 @@ export class FindCarComponent implements OnInit {
 
   ngOnInit(): void {
     //request to Toronto carpool list on init
-    this.carPostList = this.carPostService.carPostList;
+    this.carPostService.getCarPostList()
+      .subscribe((data: CarPost[]) => this.carPostList = data);
+      console.log(this.carPostList);
   }
 
 }

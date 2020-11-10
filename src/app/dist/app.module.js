@@ -9,6 +9,7 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
+var http_1 = require("@angular/common/http");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var header_component_1 = require("./components/header/header.component");
@@ -19,6 +20,7 @@ var welcome_page_component_1 = require("./pages/welcome-page/welcome-page.compon
 var page_not_found_component_1 = require("./pages/page-not-found/page-not-found.component");
 var car_posting_card_component_1 = require("./pages/find-car/car-posting-card/car-posting-card.component");
 var passenger_posting_card_component_1 = require("./pages/find-passenger/passenger-posting-card/passenger-posting-card.component");
+var search_form_welcomepage_component_1 = require("./components/search-form-welcomepage/search-form-welcomepage.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -33,11 +35,13 @@ var AppModule = /** @class */ (function () {
                 welcome_page_component_1.WelcomePageComponent,
                 page_not_found_component_1.PageNotFoundComponent,
                 car_posting_card_component_1.CarPostingCardComponent,
-                passenger_posting_card_component_1.PassengerPostingCardComponent
+                passenger_posting_card_component_1.PassengerPostingCardComponent,
+                search_form_welcomepage_component_1.SearchFormWelcomepageComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule,
+                http_1.HttpClientModule,
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

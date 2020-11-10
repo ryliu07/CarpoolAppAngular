@@ -14,8 +14,11 @@ var FindCarComponent = /** @class */ (function () {
         this.carPostService = carPostService;
     }
     FindCarComponent.prototype.ngOnInit = function () {
+        var _this = this;
         //request to Toronto carpool list on init
-        this.carPostList = this.carPostService.carPostList;
+        this.carPostService.getCarPostList()
+            .subscribe(function (data) { return _this.carPostList = data; });
+        console.log(this.carPostList);
     };
     FindCarComponent = __decorate([
         core_1.Component({
