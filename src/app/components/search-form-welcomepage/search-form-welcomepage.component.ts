@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-search-form-welcomepage',
@@ -20,13 +19,15 @@ export class SearchFormWelcomepageComponent implements OnInit {
                     "October",
                     "November",
                     "December"];
-
-  days: number[] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28];
+  days: number[] = [];
   years: number[] = [];
   currentDate = new Date();
   year:number;
   month:string;
   day:number;
+  departure:object;
+  destination:object;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -38,6 +39,10 @@ export class SearchFormWelcomepageComponent implements OnInit {
     for(var i = -1; i < 2; i++){
       this.years.push(this.currentDate.getFullYear() + i);
     }
+  }
+
+  getAddress(place: object) { 
+    this.departure = place['formatted_address'];
   }
 
   updateDayFromMonth(): void{
@@ -77,4 +82,5 @@ export class SearchFormWelcomepageComponent implements OnInit {
       this.days.push(i);
     }
   }
+
 }

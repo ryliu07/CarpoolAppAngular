@@ -22,7 +22,7 @@ var SearchFormWelcomepageComponent = /** @class */ (function () {
             "October",
             "November",
             "December"];
-        this.days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
+        this.days = [];
         this.years = [];
         this.currentDate = new Date();
     }
@@ -35,6 +35,9 @@ var SearchFormWelcomepageComponent = /** @class */ (function () {
         for (var i = -1; i < 2; i++) {
             this.years.push(this.currentDate.getFullYear() + i);
         }
+    };
+    SearchFormWelcomepageComponent.prototype.getAddress = function (place) {
+        this.departure = place['formatted_address'];
     };
     SearchFormWelcomepageComponent.prototype.updateDayFromMonth = function () {
         this.days = [];

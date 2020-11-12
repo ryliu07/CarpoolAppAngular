@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +15,8 @@ import { CarPostingCardComponent } from './pages/find-car/car-posting-card/car-p
 import { PassengerPostingCardComponent } from './pages/find-passenger/passenger-posting-card/passenger-posting-card.component';
 import { SearchFormWelcomepageComponent } from './components/search-form-welcomepage/search-form-welcomepage.component';
 import { FormsModule } from '@angular/forms';
-
+import {  } from 'googlemaps';
+import { GoogleAutocompleteComponent } from './components/google-autocomplete/google-autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     CarPostingCardComponent,
     PassengerPostingCardComponent,
-    SearchFormWelcomepageComponent
+    SearchFormWelcomepageComponent,
+    GoogleAutocompleteComponent
   ],
   imports: [
     BrowserModule,
