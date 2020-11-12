@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SearchFormWelcomepageComponent implements OnInit {
 
-  months: string[] = ["January",
+  monthString: string[] = ["January",
                     "February",
                     "March",
                     "April",
@@ -19,12 +19,15 @@ export class SearchFormWelcomepageComponent implements OnInit {
                     "October",
                     "November",
                     "December"];
+  
+  months: string[] = [];
   days: number[] = [];
   years: number[] = [];
   currentDate = new Date();
   year:number;
   month:string;
   day:number;
+  time:number[];
   departure:object;
   destination:object;
 
@@ -32,17 +35,44 @@ export class SearchFormWelcomepageComponent implements OnInit {
 
   ngOnInit(): void {
     this.year = this.currentDate.getFullYear();
-    this.month = this.months[this.currentDate.getMonth()];
+    this.month = this.monthString[this.currentDate.getMonth()];
     this.day = this.currentDate.getDate();
     console.log(this.month);
     this.updateDayFromMonth();
-    for(var i = -1; i < 2; i++){
+    this.udpateDayMonthFromYear();
+    for(var i = 0; i < 3; i++){
       this.years.push(this.currentDate.getFullYear() + i);
+    }
+  }
+
+  onTimeChange(event: Event){
+    switch((<HTMLSelectElement>event.target).value){
+      case "Morning":
+        this.time = [6,12];
+        break;
+      case "Afternoon":
+        this.time = [12,17];
+        break;
+      case "Evening":
+        this.time = [17,24];
+        break;
     }
   }
 
   getAddress(place: object) { 
     this.departure = place['formatted_address'];
+  }
+  
+
+  udpateDayMonthFromYear(): void{
+    if(this.year == this.currentDate.getFullYear()){
+      this.months = this.monthString.slice(this.currentDate.getMonth());
+      this.day = this.currentDate.getDate();
+    }else{
+      this.months = this.monthString;
+    }
+    this.month = this.months[0];
+    this.updateDayFromMonth();
   }
 
   updateDayFromMonth(): void{
@@ -78,8 +108,14 @@ export class SearchFormWelcomepageComponent implements OnInit {
       }
     }
 
-    for(var i = 1; i <= numOfDays; i++){
-      this.days.push(i);
+    if(this.year == this.currentDate.getFullYear()){
+        for(var i = 0; i <= numOfDays-this.currentDate.getDate(); i++){
+        this.days.push(this.day+i);
+      }
+    }else{
+      for(var i = 1; i <= numOfDays; i++){
+        this.days.push(i);
+      }
     }
   }
 

@@ -1,15 +1,15 @@
 <div class="form-group" >
-    <div class="row" style="padding-bottom:1%">
-        <div class="col">
+    <div class="row justify-content-center" style="padding-bottom:1%" >
+        <div class="col align-self-start">
             <app-google-autocomplete (setAddress)="getAddress($event)" addressType="geocode"></app-google-autocomplete>
         </div>
-        <div class="col">
+        <div class="col align-self-end">
             <app-google-autocomplete (setAddress)="getAddress($event)" addressType="geocode"></app-google-autocomplete>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <select class="custom-select" [(ngModel)]="year" (change)="updateDayFromMonth()">
+            <select class="custom-select" [(ngModel)]="year" (change)="udpateDayMonthFromYear()">
                 <option *ngFor = "let y of years" >{{y}}</option>
             </select>
         </div>
@@ -24,15 +24,20 @@
             </select>
         </div>
         <div class="col">
-            <select class="custom-select" id="timeslot">
-                <option selected>Time</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="custom-select" id="timeslot" (change)="onTimeChange($event)">
+                <option value="Morning">Morning(6:00-12:00)</option>
+                <option value="Afternoon">Afternoon(12:00-5:00)</option>
+                <option value="Evening">Evening(5:00-0:00)</option>
             </select>
         </div>
     </div>
-    <div class="row">
-        <button></button>
+</div>
+<div class="row">
+    <div class="col">
+        <button class="btn btn-primary">Find Cars</button>
     </div>
+    <div class="col">
+        <button class="btn btn-primary">Find Passengers</button>
+    </div>
+    
 </div>
