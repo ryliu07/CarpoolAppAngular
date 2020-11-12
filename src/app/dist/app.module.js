@@ -21,6 +21,7 @@ var page_not_found_component_1 = require("./pages/page-not-found/page-not-found.
 var car_posting_card_component_1 = require("./pages/find-car/car-posting-card/car-posting-card.component");
 var passenger_posting_card_component_1 = require("./pages/find-passenger/passenger-posting-card/passenger-posting-card.component");
 var search_form_welcomepage_component_1 = require("./components/search-form-welcomepage/search-form-welcomepage.component");
+var forms_1 = require("@angular/forms");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -40,6 +41,7 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
                 app_routing_module_1.AppRoutingModule,
                 http_1.HttpClientModule,
             ],

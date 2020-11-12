@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { CarPostingCardComponent } from './pages/find-car/car-posting-card/car-posting-card.component';
 import { PassengerPostingCardComponent } from './pages/find-passenger/passenger-posting-card/passenger-posting-card.component';
 import { SearchFormWelcomepageComponent } from './components/search-form-welcomepage/search-form-welcomepage.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SearchFormWelcomepageComponent } from './components/search-form-welcome
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
   ],
