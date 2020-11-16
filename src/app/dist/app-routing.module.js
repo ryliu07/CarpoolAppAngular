@@ -13,11 +13,13 @@ var find_car_component_1 = require("./pages/find-car/find-car.component");
 var find_passenger_component_1 = require("./pages/find-passenger/find-passenger.component");
 var login_component_1 = require("./pages/login/login.component");
 var page_not_found_component_1 = require("./pages/page-not-found/page-not-found.component");
+var register_component_1 = require("./pages/register/register.component");
 var welcome_page_component_1 = require("./pages/welcome-page/welcome-page.component");
 var mainAppRoutes = [
     { path: '', component: welcome_page_component_1.WelcomePageComponent },
     { path: 'find-car', component: find_car_component_1.FindCarComponent },
     { path: 'login', component: login_component_1.LoginComponent },
+    { path: 'register', component: register_component_1.RegisterComponent },
     { path: 'find-passenger', component: find_passenger_component_1.FindPassengerComponent },
     { path: '**', component: page_not_found_component_1.PageNotFoundComponent }
 ];

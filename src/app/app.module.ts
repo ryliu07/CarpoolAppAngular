@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import {  } from 'googlemaps';
 import { GoogleAutocompleteComponent } from './components/google-autocomplete/google-autocomplete.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FooterComponent } from './components/footer/footer.component';
     PassengerPostingCardComponent,
     SearchFormWelcomepageComponent,
     GoogleAutocompleteComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
